@@ -8,49 +8,86 @@ Na primeira tela terá uma listagem de usuários, onde a pessoa pode clicar em a
 ## Cartões para exibir
 O cartão válido vai aprovar a transação no backend;
 
+
 let cards = [
+
   // valid card
+  
   {
+  
     card_number: '1111111111111111',
+    
     cvv: 789,
+    
     expiry_date: '01/18',
+    
   },
+  
   // invalid card
+  
   {
+  
     card_number: '4111111111111234',
+    
     cvv: 123,
+    
     expiry_date: '01/20',
+    
   },
+  
 ];
 
+
 ## Transação
+
 Endpoint: https://run.mocky.io/v3/533cd5d7-63d3-4488-bf8d-4bb8c751c989
+
 Método: POST
+
 // Payload:
 
+
 interface TransactionPayload {
+
   // Card Info
+  
   card_number: string;
+  
   cvv: number;
+  
   expiry_date: string;
 
+
   // Destination User ID
+  
   destination_user_id: number;
 
   // Value of the Transaction
+  
   value: number;
+  
 }
 
 ## Obs: Por se tratar de um mock o endpoint sempre retornará o mesmo payload, sucesso no pagamento, independente do cartão
 
+
 ## Usuários
+
 Endpoint: https://www.mocky.io/v2/5d531c4f2e0000620081ddce
+
 Método: GET
+
 // Payload:
 
+
 interface User {
+
   id: number;
+  
   name: string;
+  
   img: string;
+  
   username: string;
+  
 }
