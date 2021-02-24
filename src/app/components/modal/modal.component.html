@@ -1,0 +1,27 @@
+<form>
+  <h2>Pagamento:</h2>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">R$</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+    <div class="input-group-append">
+      <span class="input-group-text">.00</span>
+    </div>
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Opções</label>
+    </div>
+    <select [(ngModel)]="selecionaCartao" name="selecionaCartao" class="custom-select" id="inputGroupSelect01">
+      <option selected>1111111111111111</option>
+      <option selected>4111111111111234</option>
+    </select>
+    
+  </div>
+
+  <button type="button" (click)="pagar()" class="btn btn-primary">Pagar</button>
+
+</form>

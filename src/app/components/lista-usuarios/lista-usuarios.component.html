@@ -1,0 +1,17 @@
+<div class="w-100 containerFlex" *ngFor="let usuario of usuarios">
+    <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{{usuario.img}}" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Nome de usuário: {{usuario.name}}  </h5>
+              <p class="card-text">ID:{{usuario.id}}</p>
+              <p>{{usuario.username}}</p>
+              <button class="btn btn-primary" data-toggle="modal" (click)="openDialog(usuario.id)">Pagar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
