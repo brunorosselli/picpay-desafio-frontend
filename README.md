@@ -1,27 +1,56 @@
-# PicpayDesafioFrontEnd
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
+## Objetivo
+O objetivo é construir uma aplicação que simula o envio de dinheiro para uma outra pessoa, via cartão de crédito.
 
-## Development server
+## Fluxo das telas
+Na primeira tela terá uma listagem de usuários, onde a pessoa pode clicar em algum usuário da lista para realizar o pagamento. Quando clicado em um usuário é então aberto um modal de pagamento, contendo as informações do usuário de destino, a opção de selecionar um cartão de crédito e um botão de pagar. O usuário deve então digitar o valor, escolher o cartão e clicar em pagar. Para realização do pagamento deve-se chamar um endpoint de pagamento que aprovará/recusará a transação. E então deve-se mostrar na tela o modal de pagamento concluído com sucesso ou o de erro.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Cartões para exibir
+O cartão válido vai aprovar a transação no backend;
 
-## Code scaffolding
+let cards = [
+  // valid card
+  {
+    card_number: '1111111111111111',
+    cvv: 789,
+    expiry_date: '01/18',
+  },
+  // invalid card
+  {
+    card_number: '4111111111111234',
+    cvv: 123,
+    expiry_date: '01/20',
+  },
+];
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Transação
+Endpoint: https://run.mocky.io/v3/533cd5d7-63d3-4488-bf8d-4bb8c751c989
+Método: POST
+// Payload:
 
-## Build
+interface TransactionPayload {
+  // Card Info
+  card_number: string;
+  cvv: number;
+  expiry_date: string;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+  // Destination User ID
+  destination_user_id: number;
 
-## Running unit tests
+  // Value of the Transaction
+  value: number;
+}
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Obs: Por se tratar de um mock o endpoint sempre retornará o mesmo payload, sucesso no pagamento, independente do cartão
 
-## Running end-to-end tests
+## Usuários
+Endpoint: https://www.mocky.io/v2/5d531c4f2e0000620081ddce
+Método: GET
+// Payload:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+interface User {
+  id: number;
+  name: string;
+  img: string;
+  username: string;
+}
