@@ -9,6 +9,17 @@ Escolhi esse projeto porque ele aborda principalmente o uso de Angular.
 
 ESSA É A MINHA VERSÃO DO DESAFIO ENTÃO EXISTEM MUITAS DIFERENÇAS DO CÓDIGO DO FELIPE! A IDEIA NÃO É FAZER UMA CÓPIA E OBTER UM RESULTADO IGUAL AO DELE E SIM DESENVOLVER A MINHA VERSÃO FEITA 100% POR MINHA PESSOA! 
 
+As tecnologias usadas foram: 
+
+ - Angualar
+ - JavaScript
+ - TypeScript
+ - HTML
+ - CSS
+ - Bootstrap
+ 
+Esse sistema foi desenvolvido por Bruno Eduardo Martins Rosselli.
+
 ## Critérios do Desafio:
 
 O objetivo é construir uma aplicação que simula o envio de dinheiro para uma outra pessoa, via cartão de crédito.
