@@ -1,7 +1,7 @@
 
 ## PROJETO PICPAY
 
-Esse é um Projeto Acadêmico que eu desenvolvi para praticar os meus conhecimentos de Front-End, esse desafio foi pego no repositório do GitHub do Felipe Fialho https://github.com/felipefialho e o meu objetivo era criar a minha versão do Desafio do PICPAY o Felipe Postou lá.
+Esse é um Projeto Acadêmico que eu desenvolvi para praticar os meus conhecimentos de Front-End, esse desafio foi escolhido no repositório do GitHub do Felipe Fialho https://github.com/felipefialho e o meu objetivo era criar a minha versão do Desafio do PICPAY o Felipe Postou lá.
 Para o desenvolvimento do Projeto eu usei os mesmo critérios e desafios postados lá.
 Escolhi esse projeto porque ele aborda principalmente o uso de Angular.
 
