@@ -11,7 +11,7 @@ ESSA É A MINHA VERSÃO DO DESAFIO ENTÃO EXISTEM MUITAS DIFERENÇAS DO CÓDIGO 
 
 As tecnologias usadas foram: 
 
- - Angualar
+ - Angular
  - JavaScript
  - TypeScript
  - HTML
